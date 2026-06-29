@@ -238,9 +238,9 @@ jobs:
 
           # Only add --ignore if we have packages to ignore
           if [ -n "${ignore_list}" ]; then
-            pacman -Syu --noconfirm --ignore="${ignore_list}" "${dependencies[@]}"
+            pacman -Syu --disable-download-timeout --noconfirm --ignore="${ignore_list}" "${dependencies[@]}"
           else
-            pacman -Syu --noconfirm "${dependencies[@]}"
+            pacman -Syu --disable-download-timeout --noconfirm "${dependencies[@]}"
           fi
 
       - name: Setup dotnet  # needed for wix
