@@ -32,7 +32,7 @@ jobs:
       symbol_release_prefix: polo
       publish_symbols: false
       upload_symbols_artifact: false
-      require_signpath_signing: true
+      require_signpath_signing: false
       require_truehdr_runtime: true
     secrets:
       symbol_token: ${{ secrets.SYMBOL_TOKEN }}
